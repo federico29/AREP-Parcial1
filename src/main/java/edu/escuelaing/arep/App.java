@@ -9,7 +9,7 @@ public class App {
         get("/", (req, res) -> {
             String valor =  req.queryParams("valor");
             String funcion = req.queryParams("funcion");
-            String url= "https://powerful-eyrie-45259.herokuapp.com/?funcion="+funcion+"&valor="+valor;
+            String url= "https://powerful-eyrie-45259.herokuapp.com/?valor="+valor+"&funcion="+funcion;
             return ClienteHttp.getResponse(url);
         });
     }
